@@ -1,14 +1,17 @@
 import * as React from 'react';
 import './App.css';
-
-import Button from './components/Button/Button';
+import { ThemeProvider } from 'emotion-theming';
+import mainTheme from './common/mainTheme';
+import Label from './components/Label/Label';
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <Button label="Ok" />
-      </div>
+      <ThemeProvider theme={mainTheme}>
+        <div className="App">
+          <Label>scsacsa</Label>
+        </div>
+      </ThemeProvider>
     );
   }
 }
