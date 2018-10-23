@@ -10,20 +10,22 @@ interface IProps extends Variables.Color {
     color?: string;
     margin?: string;
     hide?: boolean;
+    hidden?: boolean;
     children?: any;
+    theme?: any
 }
 
 const EmAlert = styled('div')(
-    (props: (IProps | any)) => {
+    (props: (IProps)) => {
         if (props.hide || props.hidden) {
             return { display: 'none' };
         }
         const base_alert = {
             'padding': '.75rem 1.25rem',
-            'border': '1px solid transparent',
-            'border-radius': '.25rem',
+            'border':  props.theme.alert.border,
+            'border-radius':  props.theme.alert.radius,
             'margin': props.margin ? props.margin : 0,
-            'color': '#fff',
+            'color': props.theme.alert.color,
             'backgroundColor': 'transparent',
             '.hr': {
                 'border-top': '1px solid',
