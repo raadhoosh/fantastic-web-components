@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.css';
 import { ThemeProvider } from 'emotion-theming';
 import mainTheme from './common/mainTheme';
 import Label from './components/Label/Label';
