@@ -2,7 +2,7 @@ import { Theme } from './styled';
 import * as Color from 'color';
 function darken(hex: string) {
     return Color(hex)
-        .darken(0.03)
+        .darken(0.5)
         .hex();
 }
 const mainTheme: Theme = {
@@ -27,6 +27,10 @@ const mainTheme: Theme = {
         size: 16,
         family: '"Roboto"',
     },
+    bottom: {
+        fontsize: '1rem',
+        border: '5px',
+    },
     darken: (_color?: string) => {
         return Color(_color)
             .darken(0.03)
@@ -34,7 +38,7 @@ const mainTheme: Theme = {
     },
     hexToRgba: (hex: string, a: number) => {
         return Color(hex).fade(a ? a : 0.5).string();
-    }
+    },
 };
 
 export default mainTheme;

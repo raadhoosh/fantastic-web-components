@@ -69,6 +69,9 @@ const EmLabel = styled('label')(
   }
 );
 
+/**
+ * General component description in JSDoc format. Markdown is *supported*.
+ */
 const Label = (props: IProps) => {
 
   return (

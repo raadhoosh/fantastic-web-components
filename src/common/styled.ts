@@ -1,5 +1,8 @@
 import styled, { CreateStyled } from 'react-emotion';
-
+interface Bottom {
+  fontsize?: number | string,
+  border?: number | string,
+}
 export interface Theme {
   color: {
     primary: string;
@@ -22,6 +25,7 @@ export interface Theme {
     size: number,
     family: string,
   },
+  bottom: Bottom,
   darken(_color?: string): string,
   hexToRgba(hex: string, a?: number): string,
 }
