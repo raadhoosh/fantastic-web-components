@@ -31,6 +31,28 @@ const mainTheme: Theme = {
         fontsize: '1rem',
         border: '5px',
     },
+    alert: {
+        fontsize: '12',
+        radius: '0',
+        border: '1px solid transparent',
+        color: '#fff',
+    },
+    input: {
+        fontsize: '12',
+        border: '1px solid',
+    },
+    label: {
+        fontsize: '12',
+        borderStyle: 'solid',
+        borderSize: 0,
+        color: '#fff',
+    },
+    badge: {
+        fontsize: '1rem',
+        borderStyle: 'solid',
+        borderSize: '1px',
+        color: '#fff',
+    },
     darken: (_color?: string) => {
         return Color(_color)
             .darken(0.03)

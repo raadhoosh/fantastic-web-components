@@ -10,11 +10,11 @@ interface IProps extends Variables.Color {
   backgroundColor?: string;
   color?: string;
   margin?: string;
-  badge?: boolean | number
+  theme?: any;
 }
 
 const EmLabel = styled('label')(
-  (props: (IProps | any)) => {
+  (props: (IProps)) => {
     const base_label = {
       display: 'inline',
       padding: '.2em .6em .3em',
@@ -27,9 +27,6 @@ const EmLabel = styled('label')(
       color: props.color ? props.color : '#fff',
       backgroundColor: 'transparent'
     };
-    if (props.badge) {
-      base_label.borderRadius = props.badge === true ? '50%' : `${props.badge}%`;
-    }
     if (props.primary) {
       base_label.backgroundColor = props.theme.color.primary;
       return base_label;

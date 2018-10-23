@@ -9,10 +9,11 @@ interface IProps extends Variables.Color {
     color?: string;
     margin?: string;
     noShadow?: boolean;
+    theme?: any;
 }
 
 const EmButton = styled('button')(
-    (props: (IProps | any)) => {
+    (props: (IProps)) => {
         const btn = {
             'display': 'inline-block',
             'text-align': 'center',
