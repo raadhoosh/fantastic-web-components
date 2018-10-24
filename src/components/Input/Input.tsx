@@ -1,4 +1,5 @@
 import styled from '../../common/styled';
+import * as React from 'react';
 
 interface IProps {
     /** Description of prop "primary". */
@@ -12,7 +13,7 @@ interface IProps {
     theme?: any;
 }
 
-const Input = styled('input')(
+const EmInput = styled('input')(
     (props: (IProps)) => {
         const css = {
             'cursor': 'auto',
@@ -50,5 +51,14 @@ const Input = styled('input')(
         return css;
     }
 );
+/**
+ * General component description in JSDoc format. Markdown is *supported*.
+ */
+const Input = (props: IProps) => {
+
+    return (
+        <EmInput {...props}/>
+    );
+};
 
 export default Input;
