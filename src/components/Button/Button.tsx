@@ -1,21 +1,59 @@
 import * as React from 'react';
 import styled from '../../common/styled';
-import Variables from '../Variables';
 
-interface IProps extends Variables.Color {
-    /** Description of prop "primary". */
+interface IProps {
+    /** This is a primary button it out!. */
+    primary?: boolean;
+    /** This is a secondary button it out!. */
+    secondary?: boolean;
+    /** This is a success button it out!. */
+    success?: boolean;
+    /** This is a info button it out!. */
+    info?: boolean;
+    /** This is a warning button it out!. */
+    warning?: boolean;
+    /** This is a danger button it out!. */
+    danger?: boolean;
+    /** This is a light button it out!. */
+    light?: boolean;
+    /** This is a dark button it out!. */
+    dark?: boolean;
+    /** This is a text color button it out! */
     children?: any;
+    /** This is a Background Color button it out!. */
     backgroundColor?: string;
+    /** This is a Text Color button it out!. */
     color?: string;
+    /** This is a margin button it out!. */
     margin?: string;
+    /** This is a noShadow button it out!. */
     noShadow?: boolean;
     theme?: any;
+    size?: 'sm' | 'lg' | 'md';
 }
 
 const EmButton = styled('button')(
     (props: (IProps)) => {
+        const theme = props.theme.button;
+        let shadow = '';
+        if (theme.shadow) {
+            shadow = theme.shadow;
+        }
+        let padding = theme.padding;
+        let fontsize = theme.fontsize;
+        let  lineHeight;
+        if (props.size === 'sm') {
+            padding = `${props.theme.unit.padding * 8}rem ${props.theme.unit.padding * 7}rem`;
+            fontsize = `${props.theme.unit.font * 8}rem`;
+            lineHeight = '0.2rem';
+        } else if (props.size === 'lg') {
+            padding = `${props.theme.unit.padding * 14}rem ${props.theme.unit.padding * 14}rem`;
+            fontsize = `${props.theme.unit.font * 11}rem`;
+            lineHeight = '0.4rem';
+        }
         const btn = {
             'display': 'inline-block',
+            'outline': 'none',
             'text-align': 'center',
             'font-weight': 'normal',
             'white-space': 'nowrap',
@@ -25,81 +63,31 @@ const EmButton = styled('button')(
             '-ms-user-select': 'none',
             'cursor': 'pointer',
             'user-select': 'none',
-            'border': props.theme.bottom.border || '1px solid',
+            'border': theme.border,
             'borderColor': 'transparent',
-            'padding': '.375rem .75rem',
-            'font-size': props.theme.bottom.fontsize || '1rem',
-            'line-height': '1.5em',
-            'border-radius': '.25rem',
-            'transition': `color .15s ease-in-out,
-                           background-color.15s ease-in-out,
-                           border-color .15s ease-in-out,
-                           box-shadow .15s ease-in-out
-             `,
-            'margin': props.margin ? props.margin : 0,
-            'color': props.color ? props.color : '#fff',
+            'padding': padding,
+            'font-size': fontsize,
+            'line-height': lineHeight || '1.6rem',
+            'border-radius': theme.radius,
+            'transition': theme.transition,
+            'margin': props.margin ? props.margin : theme.margin,
+            'color': props.color ? props.color : theme.color,
             'backgroundColor': 'transparent'
         };
-        if (props.primary) {
-            btn.backgroundColor = props.theme.color.primary;
+        const color = (props.primary && 'primary') ||
+            (props.secondary && 'secondary') ||
+            (props.success && 'success') ||
+            (props.info && 'info') ||
+            (props.danger && 'danger') ||
+            (props.warning && 'warning') ||
+            (props.light && 'light') ||
+            (props.dark && 'dark') ||
+            ('');
+        if (color !== '') {
+            btn.backgroundColor = props.theme.color[color];
             if (!props.noShadow) {
                 btn['&:hover'] = {
-                    boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(props.theme.color.primary)}`
-                };
-            }
-            return btn;
-        }
-        if (props.success) {
-            btn.backgroundColor = props.theme.color.success;
-            if (!props.noShadow) {
-                btn['&:hover'] = {
-                    boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(props.theme.color.success)}`
-                };
-            }
-            return btn;
-        }
-        if (props.info) {
-            btn.backgroundColor = props.theme.color.info;
-            if (!props.noShadow) {
-                btn['&:hover'] = {
-                    boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(props.theme.color.info)}`
-                };
-            }
-            return btn;
-        }
-        if (props.danger) {
-            btn.backgroundColor = props.theme.color.danger;
-            if (!props.noShadow) {
-                btn['&:hover'] = {
-                    boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(props.theme.color.danger)}`
-                };
-            }
-            return btn;
-        }
-        if (props.warning) {
-            btn.backgroundColor = props.theme.color.warning;
-            if (!props.noShadow) {
-                btn['&:hover'] = {
-                    boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(props.theme.color.warning)}`
-                };
-            }
-            return btn;
-        }
-        if (props.light) {
-            btn.color = props.color ? props.color : '#000';
-            btn.backgroundColor = props.theme.color.light;
-            if (!props.noShadow) {
-                btn['&:hover'] = {
-                    boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(props.theme.color.light)}`
-                };
-            }
-            return btn;
-        }
-        if (props.dark) {
-            btn.backgroundColor = props.theme.color.dark;
-            if (!props.noShadow) {
-                btn['&:hover'] = {
-                    boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(props.theme.color.dark)}`
+                    boxShadow: shadow.replace('#color', props.theme.hexToRgba(props.theme.color[color]))
                 };
             }
             return btn;
@@ -108,7 +96,7 @@ const EmButton = styled('button')(
         btn.backgroundColor = props.backgroundColor ? props.backgroundColor : props.theme.color.primary;
         if (!props.noShadow) {
             btn['&:hover'] = {
-                boxShadow: `0 0 0 0.2rem  ${props.theme.hexToRgba(btn.backgroundColor)}`
+                boxShadow: shadow.replace('#color', props.theme.hexToRgba(btn.backgroundColor))
             };
         }
         return btn;

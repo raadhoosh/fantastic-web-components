@@ -1,5 +1,7 @@
 import styled, { CreateStyled } from 'react-emotion';
 interface Alert {
+  margin: number | string,
+  padding: number | string,
   fontsize: number | string,
   radius: number | string,
   border: number | string,
@@ -10,11 +12,19 @@ interface Badge {
   borderStyle: string,
   borderSize: number | string,
   color: number | string,
+  width: number | string,
+  height: number | string,
+  radius: number | string
 }
-interface Bottom {
-  radius?: number | string,
-  fontsize?: number | string,
-  border?: number | string,
+interface Button {
+  shadow: string,
+  margin: number | string,
+  padding: number | string,
+  fontsize: number | string,
+  radius: number | string,
+  border: number | string,
+  color: number | string,
+  transition: string,
 }
 interface Input {
   fontsize: number | string,
@@ -48,7 +58,12 @@ export interface Theme {
     size: number,
     family: string,
   },
-  bottom: Bottom,
+  unit: {
+    padding: number,
+    font: number,
+    margin: number,
+  },
+  button: Button,
   badge: Badge,
   alert: Alert,
   input: Input,

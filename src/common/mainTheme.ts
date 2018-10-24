@@ -27,13 +27,29 @@ const mainTheme: Theme = {
         size: 16,
         family: '"Roboto"',
     },
-    bottom: {
+    unit: {
+        padding: .1,
+        font: .1,
+        margin: .1,
+    },
+    button: {
+        margin: '5px 3px',
+        padding: '.375rem .75rem',
+        radius: '5%',
         fontsize: '1rem',
+        color: '#fff',
         border: '5px',
+        shadow: '0 0 0 0.2rem #color',
+        transition: `color .15s ease-in-out,
+        background-color.15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .25s ease-in-out`
     },
     alert: {
+        margin: '5px 0px',
+        padding: '.75rem 1.25rem',
         fontsize: '12',
-        radius: '0',
+        radius: '5px',
         border: '1px solid transparent',
         color: '#fff',
     },
@@ -48,10 +64,13 @@ const mainTheme: Theme = {
         color: '#fff',
     },
     badge: {
-        fontsize: '1rem',
+        fontsize: '.756rem',
         borderStyle: 'solid',
         borderSize: '1px',
         color: '#fff',
+        width: '22px',
+        height: '22px',
+        radius: '50%'
     },
     darken: (_color?: string) => {
         return Color(_color)

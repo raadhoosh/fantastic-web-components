@@ -1,65 +1,69 @@
 import styled from '../../common/styled';
-import Variables from './../Variables';
 import * as React from 'react';
 
 /**
  * @description it is props for button component
  */
-interface IProps extends Variables.Color {
-    backgroundColor?: string;
+interface IProps {
+    /** This is a primary alert it out!. */
+    primary?: boolean;
+    /** This is a secondary alert it out!. */
+    secondary?: boolean;
+    /** This is a success alert it out!. */
+    success?: boolean;
+    /** This is a info alert it out!. */
+    info?: boolean;
+    /** This is a warning alert it out!. */
+    warning?: boolean;
+    /** This is a danger alert it out!. */
+    danger?: boolean;
+    /** This is a light alert it out!. */
+    light?: boolean;
+    /** This is a dark alert it out!. */
+    dark?: boolean;
+    /** This is a text color alert it out! */
     color?: string;
-    margin?: string;
+    /** This is a hide alert it out! */
     hide?: boolean;
-    hidden?: boolean;
+    /** This is a text alert it out! */
     children?: any;
+    /** This is a theme alert */
     theme?: any
 }
 
 const EmAlert = styled('div')(
     (props: (IProps)) => {
-        if (props.hide || props.hidden) {
-            return { display: 'none' };
-        }
         const base_alert = {
-            'padding': '.75rem 1.25rem',
-            'border':  props.theme.alert.border,
-            'border-radius':  props.theme.alert.radius,
-            'margin': props.margin ? props.margin : 0,
+            'border': props.theme.alert.border,
+            'border-radius': props.theme.alert.radius,
+            'margin': props.theme.alert.margin,
+            'padding': props.theme.alert.padding,
             'color': props.theme.alert.color,
-            'backgroundColor': 'transparent',
-            '.hr': {
-                'border-top': '1px solid',
-                borderTopColor: 'transparent',
-            },
+            'backgroundColor': 'transparent'
         };
         if (props.primary) {
             base_alert.backgroundColor = props.theme.color.primary;
             base_alert.color = props.color ? props.color : props.theme.color.primary_dark;
-            base_alert['.hr'].borderTopColor = props.theme.color.primary_dark;
             return base_alert;
         }
         if (props.secondary) {
             base_alert.backgroundColor = props.theme.color.secondary;
             base_alert.color = props.color ? props.color : props.theme.color.secondary_dark;
-            base_alert['.hr'].borderTopColor = props.theme.color.secondary_dark;
             return base_alert;
         }
         if (props.success) {
             base_alert.backgroundColor = props.theme.color.success;
             base_alert.color = props.color ? props.color : props.theme.color.success_dark;
-            base_alert['.hr'].borderTopColor = props.theme.color.success_dark;
             return base_alert;
         }
         if (props.info) {
             base_alert.backgroundColor = props.theme.color.info;
             base_alert.color = props.color ? props.color : props.theme.color.info_dark;
-            base_alert['.hr'].borderTopColor = props.theme.color.info_dark;
             return base_alert;
         }
         if (props.danger) {
             base_alert.backgroundColor = props.theme.color.danger;
             base_alert.color = props.color ? props.color : props.theme.color.danger_dark;
-            base_alert['.hr'].borderTopColor = props.theme.color.primary_dark;
             return base_alert;
         }
         if (props.warning) {
@@ -70,27 +74,26 @@ const EmAlert = styled('div')(
         if (props.light) {
             base_alert.backgroundColor = props.theme.color.light;
             base_alert.color = props.color ? props.color : props.theme.color.light_dark;
-            base_alert['.hr'].borderTopColor = props.theme.color.light_dark;
             return base_alert;
         }
         if (props.dark) {
             base_alert.backgroundColor = props.theme.color.dark;
             base_alert.color = props.color ? props.color : '#fff';
-            base_alert['.hr'].borderTopColor = '#fff';
             return base_alert;
         }
 
-        base_alert.backgroundColor = props.backgroundColor ? props.backgroundColor : props.theme.color.primary;
+        base_alert.backgroundColor = props.theme.color.primary;
         base_alert.color = props.color ? props.color : base_alert.color;
-        base_alert['.hr'].borderTopColor = props.theme.color.primary_dark;
         return base_alert;
     }
 );
 /**
- * General component description in JSDoc format. Markdown is *supported*.
+ * Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
  */
 const Alert = (props: IProps) => {
-
+    if (props.hide) {
+        return null;
+    }
     return (
         <EmAlert {...props}> {props.children} </EmAlert>
     );

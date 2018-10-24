@@ -1,32 +1,47 @@
-React component example:
-
-```js
-<Button size="large">Push Me</Button>
-```
-
-You can add a custom props to an example wrapper:
-
-```js { "props": { "danger": "true" } }
-<Button danger>I’m danger!<Label primary badge>1</Label></Button>
-
-```
-
-Or disable an editor by passing a `noeditor` modifier:
-
-```jsx noeditor
-<Button warning noShadow={true}>noShadow</Button>
-```
-
-To render an example as highlighted source code add a `static` modifier:
-
-```jsx static
-import {Button} from 'fantastic-web-components';
-```
-
-Examples with all other languages are rendered only as highlighted source code, not an actual component:
-
+#### Props in default theme
 ```html
-<Button warning noShadow={false}>noShadow</Button>
+ button: {
+        margin: '5px 0px',
+        padding: '.375rem .75rem',
+        radius: '.85rem',
+        fontsize: '1rem',
+        color: '#fff',
+        border: '5px',
+        shadow: '0 0 1rem 0.2rem #color',
+        transition: `color .15s ease-in-out,
+        background-color.15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .25s ease-in-out`
+    },
 ```
 
-Any [Markdown](http://daringfireball.net/projects/markdown/) is **allowed** _here_.
+### Example:
+#### Example Color
+```js
+<Button primary>Push primary</Button>
+<Button secondary>Push secondary</Button>
+<Button danger>Push danger</Button>
+<Button info>Push info</Button>
+<Button success>Push success</Button>
+<Button warning>Push warning</Button>
+<Button color="#000" light>Push light</Button>
+<Button dark>Push dark</Button>
+```
+#### Example Shadow
+```js
+<Button noShadow primary>Push primary</Button>
+<Button noShadow secondary>Push secondary</Button>
+<Button noShadow danger>Push danger</Button>
+<Button noShadow info>Push info</Button>
+<Button noShadow success>Push success</Button>
+<Button noShadow warning>Push warning</Button>
+<Button noShadow color="#000" light>Push light</Button>
+<Button noShadow dark>Push dark</Button>
+```
+
+#### Example Size
+```js
+<Button size="sm" primary>Push sm</Button>
+<Button size="md" primary>Push md</Button>
+<Button size="lg" primary>Push lg</Button>
+```
