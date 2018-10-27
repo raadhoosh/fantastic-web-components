@@ -11,7 +11,5 @@ import mainTheme from '../../../common/mainTheme';
 
 test('renders with correct styles', () => {
     const tree = renderer.create(<CardBody theme={mainTheme}>hi test</CardBody>).toJSON();
-    // expect(tree).toHaveStyleRule('background-color', mainTheme.color.primary);
-    // expect(tree).toHaveStyleRule('color', mainTheme.color.primary_dark);
     expect(tree).toMatchSnapshot();
 });
