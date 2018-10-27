@@ -9,7 +9,13 @@ expect.extend(createMatchers(emotion));
 import Alert from '../Alert';
 import mainTheme from '../../../common/mainTheme';
 
-test('renders with correct styles', () => {
+// test('renders with correct styles', () => {
+//     const tree = renderer.create(<Alert theme={mainTheme} primary>hi test</Alert>).toJSON();
+//     expect(tree).toHaveStyleRule('background-color', mainTheme.color.primary);
+//     expect(tree).toHaveStyleRule('color', mainTheme.color.primary_dark);
+//     expect(tree).toMatchSnapshot();
+// });
+it('renders with correct styles', () => {
     const tree = renderer.create(<Alert theme={mainTheme} primary>hi test</Alert>).toJSON();
     expect(tree).toHaveStyleRule('background-color', mainTheme.color.primary);
     expect(tree).toHaveStyleRule('color', mainTheme.color.primary_dark);

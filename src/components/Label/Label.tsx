@@ -1,10 +1,26 @@
 import styled from '../../common/styled';
 import * as React from 'react';
-import Variables from '../Variables';
 /**
  *  properties
  */
-interface IProps extends Variables.Color {
+interface IProps {
+  /** This is a primary button it out!. */
+  primary?: boolean;
+  /** This is a secondary button it out!. */
+  secondary?: boolean;
+  /** This is a success button it out!. */
+  success?: boolean;
+  /** This is a info button it out!. */
+  info?: boolean;
+  /** This is a warning button it out!. */
+  warning?: boolean;
+  /** This is a danger button it out!. */
+  danger?: boolean;
+  /** This is a light button it out!. */
+  light?: boolean;
+  /** This is a dark button it out!. */
+  dark?: boolean;
+  /** This is a text color button it out! */
   children?: any;
   /** Description of prop "primary". */
   backgroundColor?: string;
