@@ -57,9 +57,7 @@ const EmBadge = styled('span')(
 const Badge = (props: IProps) => {
 
   return (
-
     <EmBadge {...props}> {props.children} </EmBadge>
-
   );
 };
 

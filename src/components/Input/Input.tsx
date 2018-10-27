@@ -2,7 +2,6 @@ import styled from '../../common/styled';
 import * as React from 'react';
 
 interface IProps {
-    /** Description of prop "primary". */
     children?: any;
     backgroundColor?: string;
     color?: string;
@@ -18,7 +17,6 @@ const EmInput = styled('input')(
         const css = {
             'cursor': 'auto',
             'display': 'block',
-            'width': '100%',
             'padding': '.375rem .75rem',
             'font-size': '1rem',
             'line-height': '1.5',
