@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders with correct styles 1`] = `
-<span
-  className="css-1t7ryd5"
->
-   
-  hi test
-   
-</span>
+<textarea
+  className="css-15n63v"
+/>
 `;

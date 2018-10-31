@@ -58,6 +58,11 @@ const mainTheme: Theme = {
         fontsize: '12',
         border: '1px solid',
     },
+    textarea: {
+        fontsize: '12',
+        width: 'auto',
+        height: '50px',
+    },
     label: {
         fontsize: '12',
         borderStyle: 'solid',

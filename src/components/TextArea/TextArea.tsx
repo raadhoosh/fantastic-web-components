@@ -12,12 +12,15 @@ interface IProps {
     theme?: any;
 }
 
-const EmInput = styled('input')(
+const EmTextArea = styled('textarea')(
     (props: (IProps)) => {
         const css = {
+            width: props.theme.textarea.width,
+            height: props.theme.textarea.height,
             'cursor': 'auto',
             'display': 'block',
-            'padding': '.375rem .75rem',
+            'padding': '10px 12px',
+            'box-sizing': 'border-box',
             'font-size': '1rem',
             'line-height': '1.5',
             'color': '#495057',
@@ -31,17 +34,17 @@ const EmInput = styled('input')(
                 'background-color': '#fff',
                 'border-color': props.theme.color.primary,
                 'outline': 0,
-                'box-shadow': !props.noShadow ? `0 0 0 0.02rem ${props.theme.hexToRgba(props.theme.color.primary, 0.25)}` : 'none',
+                'box-shadow': !props.noShadow ? `0 0 0 0.025rem ${props.theme.hexToRgba(props.theme.color.primary, 0.25)}` : 'none',
             }
         };
         if (props.small) {
-            css.padding = '.25rem .5rem';
+            css.padding = '8px';
             css['font-size'] = '.875rem';
             css['line-height'] = '1.5';
             css['border-radius'] = '.2rem';
         }
         if (props.large) {
-            css.padding = '.5rem 1rem';
+            css.padding = '12px';
             css['font-size'] = '1.25rem';
             css['line-height'] = '1.5';
             css['border-radius'] = '.3rem';
@@ -52,11 +55,11 @@ const EmInput = styled('input')(
 /**
  * General component description in JSDoc format. Markdown is *supported*.
  */
-const Input = (props: IProps) => {
+const TextArea = (props: IProps) => {
 
     return (
-        <EmInput {...props}/>
+        <EmTextArea {...props}/>
     );
 };
 
-export default Input;
+export default TextArea;
