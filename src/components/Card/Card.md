@@ -1,3 +1,4 @@
+
 Card example:
 
 ```js
@@ -20,48 +21,43 @@ Card example:
 Card example Background Color:
 
 ```js
-<Card primary>
+<Card>
     <CardHeader primary>
         Pizza
     </CardHeader>
     <CardBody>
         🍕🍕🍕🍕🍕🍕🍕🍕🍕
         🍕🍕🍕🍕🍕🍕🍕🍕🍕
+        🍕🍕🍕🍕🍕🍕🍕🍕🍕
+        🍕🍕🍕🍕🍕🍕🍕🍕🍕
     </CardBody>
-    <CardFooter>
+    <CardFooter primary>
         <Button secondary>
             Accept
         </Button> 
     </CardFooter>
 </Card>
+
 <br/>
-<Card secondary>
-    <CardHeader secondary>
-        Pizza
-    </CardHeader>
-    <CardBody>
-        🍕🍕🍕🍕🍕🍕🍕🍕🍕
-        🍕🍕🍕🍕🍕🍕🍕🍕🍕
-    </CardBody>
+<Card>   
+    <CardBodyImg/>
     <CardFooter>
-        <Button>
-            Accept
-        </Button> 
+       John
+       <p>Architect &amp; Engineer</p>
     </CardFooter>
 </Card>
 <br/>
-<Card success>
+<Card>
     <CardHeader success>
-        Pizza
+       Header
     </CardHeader>
     <CardBody>
-        🍕🍕🍕🍕🍕🍕🍕🍕🍕
-        🍕🍕🍕🍕🍕🍕🍕🍕🍕
+      Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </CardBody>
-    <CardFooter>
-        <Button>
-            Accept
-        </Button> 
+    <CardFooter success>
+       Footer
     </CardFooter>
 </Card>
+
+
 ```

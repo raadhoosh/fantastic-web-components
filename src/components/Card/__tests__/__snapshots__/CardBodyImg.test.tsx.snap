@@ -2,10 +2,10 @@
 
 exports[`renders with correct styles 1`] = `
 <div
-  className="css-m0pf1x"
+  className="css-bsawnf"
 >
-   
-  hi test
-   
+  <img
+    src={undefined}
+  />
 </div>
 `;

@@ -78,6 +78,9 @@ const mainTheme: Theme = {
         height: 'auto',
         radius: '10px',
     },
+    card: {
+      width: '499px'
+    },
     darken: (_color?: string) => {
         return Color(_color)
             .darken(0.03)

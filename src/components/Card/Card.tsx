@@ -34,6 +34,7 @@ export interface IProps {
 const EmCard = styled('div')(
     (props: (IProps)) => {
         const base = {
+            width: '499px',
             border: '1px solid',
             borderRadius: '.25rem',
             borderColor: 'rgba(0,0,0,.125)',
