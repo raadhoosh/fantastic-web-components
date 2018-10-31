@@ -17,16 +17,14 @@ interface IProps {
 const EmBadge = styled('span')(
   (props: (IProps)) => {
     const base_label = {
-      display: 'flex',
+     'display': 'inline-block',
+     'padding': '2px 7px',
       zIndex: 1,
       width: props.theme.badge.width,
       height: props.theme.badge.height,
-      'flex-wrap': 'wrap',
-      'align-items': 'center',
-      'align-content': 'center',
+      'text-align': 'center',
       'border-radius': props.theme.badge.radius,
       'flex-direction': 'row',
-      'justify-content': 'center',
       color: props.theme.badge.color,
       fontSize: props.theme.badge.fontSize,
       backgroundColor: props.theme.color.primary,

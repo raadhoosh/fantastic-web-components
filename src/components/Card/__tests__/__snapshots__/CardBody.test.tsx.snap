@@ -4,6 +4,8 @@ exports[`renders with correct styles 1`] = `
 <div
   className="css-12xg6le"
 >
+   
   hi test
+   
 </div>
 `;

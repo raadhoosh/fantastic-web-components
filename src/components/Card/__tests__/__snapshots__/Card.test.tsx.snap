@@ -2,8 +2,10 @@
 
 exports[`renders with correct styles 1`] = `
 <div
-  className="css-104y8oi"
+  className="css-1im2be6"
 >
+   
   hi test
+   
 </div>
 `;

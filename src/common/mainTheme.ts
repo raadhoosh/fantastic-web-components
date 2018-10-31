@@ -22,6 +22,7 @@ const mainTheme: Theme = {
         info_dark: darken('#5bc0de'),
         danger: '#d9534f',
         danger_dark: darken('#d9534f'),
+        default: '#6c757d'
     },
     font: {
         size: 16,
@@ -68,9 +69,9 @@ const mainTheme: Theme = {
         borderStyle: 'solid',
         borderSize: '1px',
         color: '#fff',
-        width: '22px',
-        height: '22px',
-        radius: '50%'
+        width: 'auto',
+        height: 'auto',
+        radius: '10px',
     },
     darken: (_color?: string) => {
         return Color(_color)

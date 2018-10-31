@@ -53,6 +53,7 @@ export interface Theme {
     info_dark: string;
     danger: string;
     danger_dark: string;
+    default: string
   };
   font: {
     size: number,
