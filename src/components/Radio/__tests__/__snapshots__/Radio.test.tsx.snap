@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with correct styles 1`] = `
+<label
+  className="css-1qi4mfx"
+>
+  <input
+    className="css-10b12fz"
+    disabled={true}
+    type="radio"
+  />
+  <span />
+</label>
+`;
