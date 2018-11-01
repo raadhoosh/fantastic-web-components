@@ -38,10 +38,22 @@
 <Button noShadow color="#000" light>Push light</Button>
 <Button noShadow dark>Push dark</Button>
 ```
+```js
+<br/>
+<Button size="lg" warning 
+onClick={
+    ()=>{
+        console.log('clicked me');
+    }
+}
+>click me</Button>
+<br/>
+```
 
 #### Example Size
 ```js
 <Button size="sm" primary>Push sm</Button>
 <Button size="md" primary>Push md</Button>
 <Button size="lg" primary>Push lg</Button>
+
 ```
