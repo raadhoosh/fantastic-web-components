@@ -17,7 +17,7 @@ Card example:
     </CardFooter>
 </Card>
 ```
-
+<br/>
 Card example Background Color:
 
 ```js
@@ -39,6 +39,8 @@ Card example Background Color:
 </Card>
 
 <br/>
+<br/>
+<br/>
 <Card>   
     <CardBodyImg/>
     <CardFooter>
@@ -46,6 +48,8 @@ Card example Background Color:
        <p>Architect &amp; Engineer</p>
     </CardFooter>
 </Card>
+<br/>
+<br/>
 <br/>
 <Card>
     <CardHeader success>
