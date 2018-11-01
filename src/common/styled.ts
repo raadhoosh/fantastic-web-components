@@ -30,6 +30,14 @@ interface Input {
   fontsize: number | string,
   border: number | string,
 }
+interface Card {
+  width: number | string,
+}
+interface TextArea {
+  fontsize: number | string,
+  width: number | string,
+  height: number | string,
+}
 interface Label {
   fontsize: number | string,
   borderStyle: string,
@@ -68,7 +76,9 @@ export interface Theme {
   badge: Badge,
   alert: Alert,
   input: Input,
+  textarea: TextArea,
   label: Label,
+  card: Card,
   darken(_color?: string): string,
   hexToRgba(hex: string, a?: number): string,
 }

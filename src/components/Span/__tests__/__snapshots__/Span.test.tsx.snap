@@ -2,10 +2,10 @@
 
 exports[`renders with correct styles 1`] = `
 <span
-  className="css-1t7ryd5"
+  className="css-1n0ic6j"
 >
    
-  hi test
+  ok
    
 </span>
 `;

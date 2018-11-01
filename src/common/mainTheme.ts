@@ -58,6 +58,11 @@ const mainTheme: Theme = {
         fontsize: '12',
         border: '1px solid',
     },
+    textarea: {
+        fontsize: '12',
+        width: 'auto',
+        height: '50px',
+    },
     label: {
         fontsize: '12',
         borderStyle: 'solid',
@@ -72,6 +77,9 @@ const mainTheme: Theme = {
         width: 'auto',
         height: 'auto',
         radius: '10px',
+    },
+    card: {
+      width: '499px'
     },
     darken: (_color?: string) => {
         return Color(_color)
