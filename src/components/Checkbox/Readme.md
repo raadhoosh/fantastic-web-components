@@ -6,6 +6,6 @@ Checkbox example:
 <Checkbox label='Simple example'/>
 <br/>
 
-<Checkbox disabled/>
+<Checkbox disabled label="Don't know (Disabled)"/>
 
 ```

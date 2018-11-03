@@ -6,10 +6,10 @@ import * as emotion from 'emotion';
 // Add the custom matchers provided by 'jest-emotion'
 expect.extend(createMatchers(emotion));
 
-import Radio from '../Radio';
+import Radio  from '../Radio';
 import mainTheme from '../../../common/mainTheme';
 
 test('renders with correct styles', () => {
-    const inp = renderer.create(<Radio theme={mainTheme} disabled />).toJSON();
+    const inp = renderer.create(<Radio  theme={mainTheme} disabled />).toJSON();
     expect(inp).toMatchSnapshot();
 });

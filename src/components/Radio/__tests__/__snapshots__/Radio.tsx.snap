@@ -2,12 +2,16 @@
 
 exports[`renders with correct styles 1`] = `
 <label
-  className="css-1qi4mfx"
+  className="css-189tkbf"
 >
   <input
-    className="css-10b12fz"
+    className="css-wui0w3"
     disabled={true}
+    name={undefined}
     type="radio"
+  />
+  <span
+    className="checkmark"
   />
   <span />
 </label>

@@ -1,11 +1,11 @@
-Radio example:
+Radio  example:
 
 ```js
-<Radio name='gender' label='male'/>
+<Radio name='example'  label='Simple example'/>
 <br/>
-<Radio name='gender' label='female'/>
+<Radio name='example'  label='Simple example'/>
 <br/>
 
-<Radio name='gender' disabled/>
+<Radio  disabled label="Don't know (Disabled)"/>
 
 ```
