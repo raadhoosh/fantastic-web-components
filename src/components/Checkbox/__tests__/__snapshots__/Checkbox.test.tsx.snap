@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with correct styles 1`] = `
+<label
+  className="css-8114jf"
+>
+  <input
+    className="css-wui0w3"
+    disabled={true}
+    type="checkbox"
+  />
+  <span
+    className="checkmark"
+  />
+  <span />
+</label>
+`;
