@@ -4,23 +4,23 @@ import * as React from 'react';
  *  properties
  */
 interface IProps {
-  /** This is a primary button it out!. */
+  /** This is a primary label it out!. */
   primary?: boolean;
-  /** This is a secondary button it out!. */
+  /** This is a secondary label it out!. */
   secondary?: boolean;
-  /** This is a success button it out!. */
+  /** This is a success label it out!. */
   success?: boolean;
-  /** This is a info button it out!. */
+  /** This is a info label it out!. */
   info?: boolean;
-  /** This is a warning button it out!. */
+  /** This is a warning label it out!. */
   warning?: boolean;
-  /** This is a danger button it out!. */
+  /** This is a danger label it out!. */
   danger?: boolean;
-  /** This is a light button it out!. */
+  /** This is a light label it out!. */
   light?: boolean;
-  /** This is a dark button it out!. */
+  /** This is a dark label it out!. */
   dark?: boolean;
-  /** This is a text color button it out! */
+  /** This is a text color label it out! */
   children?: any;
   /** Description of prop "primary". */
   backgroundColor?: string;

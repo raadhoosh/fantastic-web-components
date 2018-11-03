@@ -16,7 +16,7 @@ const mainTheme: Theme = {
         light: '#f8f9fa',
         light_dark: darken('#f8f9fa'),
         dark: '#000',
-        success: '#d4edda',
+        success: '#4cae4c',
         success_dark: '#155724',
         info: '#5bc0de',
         info_dark: darken('#5bc0de'),
@@ -77,6 +77,30 @@ const mainTheme: Theme = {
         width: 'auto',
         height: 'auto',
         radius: '10px',
+    },
+    h1: {
+        fontsize: '2em',
+        color: '#000'
+    },
+    h2: {
+        fontsize: '1.5em',
+        color: '#000'
+    },
+    h3: {
+        fontsize: '1.17em',
+        color: '#000'
+    },
+    h4: {
+        fontsize: '1.33em',
+        color: '#000'
+    },
+    h5: {
+        fontsize: '0.83em',
+        color: '#000'
+    },
+    h6: {
+        fontsize: '0.67em',
+        color: '#000'
     },
     card: {
       width: '499px'

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders with correct styles 1`] = `
-<span
-  className="css-e1ymif"
+<h2
+  className="css-15m3eps"
 >
    
   ok
    
-</span>
+</h2>
 `;

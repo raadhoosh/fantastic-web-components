@@ -1,4 +1,5 @@
 import styled, { CreateStyled } from 'react-emotion';
+import H3 from 'src/components/Heading/H3/H3';
 interface Alert {
   margin: number | string,
   padding: number | string,
@@ -44,6 +45,30 @@ interface Label {
   borderSize: number | string,
   color: number | string,
 }
+interface H1 {
+  fontsize: string | number,
+  color: number | string
+}
+interface H2 {
+  fontsize: string | number,
+  color: number | string
+}
+interface H3 {
+  fontsize: string | number,
+  color: number | string
+}
+interface H4 {
+  fontsize: string | number,
+  color: number | string
+}
+interface H5 {
+  fontsize: string | number,
+  color: number | string
+}
+interface H6 {
+  fontsize: string | number,
+  color: number | string
+}
 export interface Theme {
   color: {
     primary: string;
@@ -79,6 +104,12 @@ export interface Theme {
   textarea: TextArea,
   label: Label,
   card: Card,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+  h6: H6,
   darken(_color?: string): string,
   hexToRgba(hex: string, a?: number): string,
 }
