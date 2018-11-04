@@ -10,6 +10,8 @@ interface IProps {
     large?: boolean;
     noShadow?: boolean;
     theme?: any;
+    value?: string;
+    onChange?: (e: React.FormEvent<HTMLInputElement>) => void
 }
 
 const EmInput = styled('input')(
@@ -53,9 +55,9 @@ const EmInput = styled('input')(
  * General component description in JSDoc format. Markdown is *supported*.
  */
 const Input = (props: IProps) => {
-
+    const { onChange, value, ...others } = props;
     return (
-        <EmInput {...props}/>
+        <EmInput value={value} onChange={onChange}  {...others} />
     );
 };
 

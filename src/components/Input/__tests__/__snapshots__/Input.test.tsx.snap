@@ -3,5 +3,7 @@
 exports[`renders with correct styles 1`] = `
 <input
   className="css-15h7r07"
+  onChange={undefined}
+  value="text"
 />
 `;
